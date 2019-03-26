@@ -1,0 +1,101 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "54169be9-433c-491a-bf17-45c2374a286b": {
+        "id": "54169be9-433c-491a-bf17-45c2374a286b",
+        "parent": null,
+        "name": "Test539",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "03ec5f20-7a4c-4403-8104-880f1fe8a1d5"
+        ],
+        "isRemovable": false,
+        "filePath": "Test539"
+      },
+      "03ec5f20-7a4c-4403-8104-880f1fe8a1d5": {
+        "id": "03ec5f20-7a4c-4403-8104-880f1fe8a1d5",
+        "parent": "54169be9-433c-491a-bf17-45c2374a286b",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Test539/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    // for(let i = 0; i < 50; i++) {\n    //     console.log(`Hello ${i}`);\n    // }\n    console.log(\"Hello\");\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "cweRule539",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "testCases": {
+          "a6ea90a2-1993-44c7-a419-ac56cf93215f": {
+            "id": "a6ea90a2-1993-44c7-a419-ac56cf93215f",
+            "name": "E1",
+            "functionId": "03ec5f20-7a4c-4403-8104-880f1fe8a1d5",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "54169be9-433c-491a-bf17-45c2374a286b",
+    "openFiles": [
+      "03ec5f20-7a4c-4403-8104-880f1fe8a1d5"
+    ],
+    "currentFileId": "03ec5f20-7a4c-4403-8104-880f1fe8a1d5",
+    "resources": {
+      "cweRule539": {
+        "name": "cweRule539",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 0,
+          "name": "Rule539",
+          "description": "",
+          "scheduleExpression": "cron(0/10 * * * ? *)"
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "Test539",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1553578712209
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "Test539",
+      "url": "https://github.com/sigmaidetest/Test539"
+    }
+  }
+}
